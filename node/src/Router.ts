@@ -105,7 +105,7 @@ type PipeTransportPair =
 };
 
 export type RouterEvents =
-{ 
+{
 	workerclose: [];
 	// Private events.
 	'@close': [];
@@ -1008,7 +1008,7 @@ export class Router extends EnhancedEventEmitter<RouterEvents>
 
 		if (appData && typeof appData !== 'object')
 			throw new TypeError('if given, appData must be an object');
-		
+
 		const internal = { ...this.#internal, rtpObserverId: uuidv4() };
 		const reqData = { interval };
 
@@ -1024,7 +1024,7 @@ export class Router extends EnhancedEventEmitter<RouterEvents>
 					this.#producers.get(producerId)
 				)
 			});
-		
+
 		this.#rtpObservers.set(activeSpeakerObserver.id, activeSpeakerObserver);
 		activeSpeakerObserver.on('@close', () =>
 		{

@@ -81,8 +81,8 @@ export interface TransportTraceEventData
 
 export type SctpState = 'new' | 'connecting' | 'connected' | 'failed' | 'closed';
 
-export type TransportEvents = 
-{ 
+export type TransportEvents =
+{
 	routerclose: [];
 	listenserverclose: [];
 	trace: [TransportTraceEventData];
@@ -665,7 +665,7 @@ export class Transport<Events extends TransportEvents = TransportEvents,
 				{
 					logger.error(
 						`consume() | reaching max MID value "${this.#nextMidForConsumers}"`);
-	
+
 					this.#nextMidForConsumers = 0;
 				}
 			}
